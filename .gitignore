@@ -1,0 +1,13 @@
+.tmp*
+.metadata
+.settings
+.recommenders
+.project
+.classpath
+node
+node_modules
+target
+assets
+tmp
+*.log
+RemoteSystemsTempFiles

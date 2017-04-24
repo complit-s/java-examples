@@ -1,0 +1,68 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "eslint:all",
+    "plugin:react/all"
+  ],
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "sort-imports": "off",
+    "sort-keys": "off",
+    "padded-blocks": "off",
+    "no-ternary": "off",
+    "multiline-ternary": "off",
+    "semi": ["error", "never"],
+    "dot-location": "off",
+    "one-var": "off",
+    "global-require": "off",
+    "space-before-function-paren": ["error", "never"],
+    "lines-around-comment": "off",
+    "max-len": ["error", 120],
+    "quote-props": "off",
+    "object-curly-spacing": ["error", "never"],
+    "object-property-newline": "off",
+    "object-curly-newline": "off",
+    "no-warning-comments": "off",
+    "max-statements": ["error", 50],
+    "no-plusplus": "off",
+    "no-magic-numbers": ["error", {
+      "ignore": [0, -1, 1],
+      "ignoreArrayIndexes": true,
+      "detectObjects": true
+    }],
+    "arrow-parens": ["error", "as-needed"],
+    "generator-star-spacing": ["error", {"before": true, "after": true}],
+    "capitalized-comments": "off",
+    "class-methods-use-this": ["error", { "exceptMethods": ["render", "shouldComponentUpdate"] }],
+    "linebreak-style": "off",
+    "no-inline-comments": "off",
+    "newline-before-return": "off",
+    "no-extra-parens": ["error", "all", { "ignoreJSX": "all" }],
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 3 }],
+    "max-params": ["error", 6],
+    "func-names": ["error", "as-needed"],
+    "line-comment-position": "off",
+
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-max-props-per-line": "off",
+    "react/jsx-sort-props": "off",
+    "react/jsx-no-literals": "off",
+    "react/jsx-tag-spacing": ["error", {"beforeSelfClosing": "never"}],
+    "react/jsx-space-before-closing": ["error", "never"],
+    "react/sort-prop-types": "off",
+    "react/prop-types": ["error", {"ignore": ["children", "className"]}],
+    "react/no-multi-comp": ["error", {"ignoreStateless": true}],
+    "react/no-set-state": "off",
+    "react/forbid-component-props": "off",
+
+    "require-jsdoc": "off"
+  }
+}

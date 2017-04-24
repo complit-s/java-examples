@@ -1,0 +1,59 @@
+@errorColor: red;
+@navigationBgColor: #f4f5f6;
+@navigationBorderColor: #d1d1d1;
+@navigationBgActiveColor: #e4e5e6;
+@navigationTitleColor: #606c76;
+@navigationHeight: 5.2rem;
+
+.error {
+  color: @errorColor;
+}
+
+.navigation {
+  background: @navigationBgColor;
+  border-bottom: .1rem solid @navigationBorderColor;
+  display: block;
+  height: @navigationHeight;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.navigation .navigation-list {
+  list-style: none;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.navigation .navigation-item {
+  float: left;
+  margin-bottom: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+}
+
+.navigation .navigation-item.active {
+  background: @navigationBgActiveColor;
+}
+
+.navigation .navigation-link, .navigation .navigation-title, .navigation .title {
+  display: inline;
+  font-size: 1.6rem;
+  line-height: @navigationHeight;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navigation .navigation-title, .navigation .title {
+  color: @navigationTitleColor;
+  position: relative;
+}
+
+.main-container {
+  padding-top: @navigationHeight;
+}
