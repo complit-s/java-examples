@@ -12,19 +12,22 @@
 
 ## Команды примера, которые используются для разработки и сборки приложения:
 
-Разработка клиентской части приложения с "горячей" перезагрузкой (приложение доступно по адресу http://localhost:8081/ это порт web pack dev server).
+Разработка клиентской части приложения с "горячей" перезагрузкой (приложение доступно по адресу http://localhost:8081/ это порт web pack dev server): запустить backend приложения либо с помощью команды запуска приложения либо в IDE (если приложение запускается в IDE, желательно включить maven профиль frontendDevelopment), перейти в каталог src/main/frontend и запустить web pack dev server командой:
 
-Запустить backend приложения либо с помощью команды запуска приложения либо в IDE (если приложение запускается в IDE, желательно включить maven профиль frontendDevelopment). Перейти в каталог src/main/frontend и запустить web pack dev server командой: 
-    npm run debug
+	npm run debug
 
 Построение production версии приложения (минифицированный клиенский бандл скриптов и стилей, настрока кеширования статики на клиенте, привязка к адресу 0.0.0.0):
+	
 	mvn clean package -P production
 
 Запуск приложения на исполнение (приложение доступно по адресу http://0.0.0.0:8080/):
+
 	java -jar target/java-react-redux-isomorphic-example-0.0.1-SNAPSHOT.jar
 
 Построение docker image (используется плагин к maven: docker-maven-plugin)
+	
 	mvn clean package docker:build -P production
 
 Запуск docker container (приложение доступно по адресу http://localhost:8080/):
+	
 	docker run -d -p 8080:8080 java-react-redux-isomorphic-example
